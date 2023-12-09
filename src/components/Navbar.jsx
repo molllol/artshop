@@ -5,6 +5,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { mobile } from '../responsive';
 import { useSelector } from 'react-redux';
+import { Link } from "react-router-dom";
 
 //Navbar
 const Container = styled.div`
@@ -84,7 +85,6 @@ cursor: pointer;
 margin-left: 10px;
 ${mobile({marginLeft:"10px"})}
 `;
-const Link = styled.link``;
 
  const SearchContainer = styled.div`
    border: none;
