@@ -84,6 +84,7 @@ cursor: pointer;
 margin-left: 10px;
 ${mobile({marginLeft:"10px"})}
 `;
+const Link = styled.link``;
 
  const SearchContainer = styled.div`
    border: none;
@@ -137,11 +138,13 @@ const Navbar = () => {
                   <Input placeholder='Search'/> */}
                   <Search/>
                 </SearchContainer>              
+                <Link to="/cart">
                <MenuItem2>
                   <Badge badgeContent={quantity} color="primary">
                   <ShoppingCartOutlined/>
                   </Badge>
                </MenuItem2>
+               </Link>
                <MenuItem3><PersonOutline/></MenuItem3>
             </Right>
         </Wrapper>
