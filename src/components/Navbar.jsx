@@ -5,7 +5,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { mobile } from '../responsive';
 import { useSelector } from 'react-redux';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 //Navbar
 const Container = styled.div`
@@ -138,7 +138,7 @@ const Navbar = () => {
                   <Input placeholder='Search'/> */}
                   <Search/>
                 </SearchContainer>              
-                <Link to="/cart">
+                <Link to='/cart'>
                <MenuItem2>
                   <Badge badgeContent={quantity} color="primary">
                   <ShoppingCartOutlined/>
