@@ -1,7 +1,7 @@
 import {
     BrowserRouter as Router,
     Switch,
-   Route, Redirect
+   Route, Redirect,
   } from "react-router-dom";
 import Product from "./pages/Product";
 import Home from "./pages/Home";

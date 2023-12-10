@@ -170,7 +170,7 @@ font-weight: 600;
 
 const Cart = () => {
 
-  const cart= useSelector((state) => state.cart);
+  const cart = useSelector((state) => state.cart);
   const [stripeToken, setStripeToken] = useState(null);
   const history = useHistory();
 
@@ -191,7 +191,7 @@ const Cart = () => {
       } catch {}
     };
     stripeToken && makeRequest();
-  }, [stripeToken, cart.total, history]);// eslint-disable-line react-hooks/exhaustive-deps
+  }, [stripeToken, cart,cart.total, history]);
     
   return (
     <Container>
