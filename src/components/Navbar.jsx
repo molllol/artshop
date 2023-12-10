@@ -5,7 +5,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { mobile } from '../responsive';
 import { useSelector } from 'react-redux';
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 //Navbar
 const Container = styled.div`
@@ -51,11 +51,7 @@ const Logo = styled.h1`
  //Center of Navbar
  const Center = styled.div`
     flex: 1;
-    text-align: center;
-    &:hover{
-        color: #c3c3ff;
-        
-    }
+    text-align: center; 
  `;
 
  const MenuItem = styled.div`
@@ -126,7 +122,7 @@ const Navbar = () => {
             
             <Center>
                
-              <MenuItem>HOME</MenuItem>
+              <Link to="/"><MenuItem>HOME</MenuItem></Link>
                <MenuItem>ABOUT US</MenuItem>
                <MenuItem>SHOP</MenuItem>
                <MenuItem>SIGN UP</MenuItem>
@@ -140,12 +136,13 @@ const Navbar = () => {
                   <Search/>
                 </SearchContainer>              
 
+               <Link to="/cart">
                <MenuItem2>
                   <Badge badgeContent={quantity} color="primary">
                   <ShoppingCartOutlined/>
                   </Badge>
                </MenuItem2>
-               
+               </Link>
                <MenuItem3><PersonOutline/></MenuItem3>
             </Right>
         </Wrapper>

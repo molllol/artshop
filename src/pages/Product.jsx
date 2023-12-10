@@ -49,52 +49,16 @@ const Desc = styled.p`
     margin: 20px 0px;
 `;
 
-/*const Size = styled.p`
+const Size = styled.p`
     font-weight: 100;
     font-size: 30px;
     margin: 20px 0px;
-`;*/
+`;
 
 const Price = styled.span`
     font-weight: 100;
     font-size: 40px;
 `;
-
-//Filters
-
-const FilterContainer = styled.div`
-  width: 50%;
-  margin: 30px 0px;
-  display: flex;
-  justify-content: space-between;
-  ${mobile({ width: "100%" })}
-`;
-
-const Filter = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-const FilterTitle = styled.span`
-  font-size: 20px;
-  font-weight: 200;
-`;
-
- const FilterSize = styled.div`
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: ${(props) => props.size};
-  margin: 0px 5px;
-  cursor: pointer;
-`;
-
-/*const FilterSize = styled.select`
-  margin-left: 10px;
-  padding: 5px;
-`;
-
-const FilterSizeOption = styled.option``;*/
 
 
 // Add to cart section after price
@@ -141,7 +105,6 @@ const Product = () => {
     const id = location.pathname.split("/")[2];
     const [product, setProduct] = useState({});
     const [quantity, setQuantity] = useState(1);
-    const [size, setSize] = useState("");
     const dispatch = useDispatch();
   
     useEffect(() => {
@@ -164,7 +127,7 @@ const Product = () => {
   
     const handleClick = () => {
       dispatch(
-        addProduct({ ...product, quantity, size })
+        addProduct({ ...product, quantity, })
       );
     };
 
@@ -180,14 +143,7 @@ const Product = () => {
           <Title>{product.title}</Title>
           <Desc>{product.desc}</Desc>
           <Price>$ {product.price}</Price>
-          <FilterContainer>
-            <Filter>
-              <FilterTitle>Size</FilterTitle>
-              {product.size?.map((c) => (
-                <FilterSize size={c} key={c} onClick={() => setSize(c)} />
-              ))}    
-            </Filter>
-          </FilterContainer>
+          <Size>Size: {product.size}</Size>
           <AddContainer>
             <AmountContainer>
               <Remove onClick={() => handleQuantity("dec")} />
