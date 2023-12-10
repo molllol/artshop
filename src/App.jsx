@@ -1,8 +1,7 @@
 import {
     BrowserRouter as Router,
     Switch,
-   Route, Redirect,
-  } from "react-router-dom";
+   Route, Redirect } from "react-router-dom";
 import Product from "./pages/Product";
 import Home from "./pages/Home";
 import ProductList from "./pages/ProductList";
@@ -41,6 +40,6 @@ const App = () => {
       </Switch>
     </Router>
     );
-};
+  };
 
 export default App;

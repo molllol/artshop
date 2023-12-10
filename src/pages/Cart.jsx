@@ -62,12 +62,14 @@ const Bottom = styled.div`
 
 const Info = styled.div`
     flex: 3;
+  
 `;
 
 // Product style
 const Product = styled.div`
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10px;
     ${mobile({flexDirection: "column"})}
 `;
 
@@ -206,7 +208,6 @@ const Cart = () => {
                 </TopTexts>
                 <TopButton type = "filled">CHECKOUT NOW</TopButton>
             </Top>
-
             <Bottom>
                 <Info>
                     {cart.products.map((product) => (
@@ -237,8 +238,8 @@ const Cart = () => {
                     </PriceDetail>
                   </Product>
                     ))}
-                    <Hr/>
                 </Info>
+                <Hr/>
                 <Summary>
                 <SummaryTitle>ORDER SUMMARY</SummaryTitle>
             <SummaryItem>
@@ -247,7 +248,7 @@ const Cart = () => {
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Estimated Shipping</SummaryItemText>
-              <SummaryItemPrice>$ 10.00</SummaryItemPrice>
+              <SummaryItemPrice>$ 5.00</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Shipping Discount</SummaryItemText>

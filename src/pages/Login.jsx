@@ -49,7 +49,7 @@ const Button = styled.button`
     background-color: #000000;
     margin-bottom: 10px;
   &:disabled {
-    color: green;
+    color: #38ffe4;
     cursor: not-allowed;
   }
 `;
@@ -63,7 +63,7 @@ const Link = styled.a`
 `;
 
 const Error = styled.span`
-  color: red;
+  color: #6b10ff;
 `;
 
 
