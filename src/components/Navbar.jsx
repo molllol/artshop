@@ -1,6 +1,6 @@
 //Navbar Component
 import { Badge } from '@material-ui/core';
-import { PersonOutline, Search, ShoppingCartOutlined} from '@material-ui/icons';
+import { Search, ShoppingCartOutlined} from '@material-ui/icons';
 import React from 'react';
 import styled from 'styled-components';
 import { mobile } from '../responsive';
@@ -35,35 +35,39 @@ const Container = styled.div`
     align-items: center;
  `;
 
+//Language
 const Language = styled.span`
 font-size: 14px;
 cursor: pointer;
 ${mobile({display: "none"})}
 `;
 
+//Logo
 const Logo = styled.h1`
-   font-weight: bold;
-   font-size: 20px;
-   margin-left: 20px;
-   ${mobile({fontSize: "24px"})}
- `;
+font-weight: bold;
+font-size: 30px;
+margin-left: 20px;
+${mobile({fontSize: "24px"})}
+`;
 
- //Center of Navbar
+
+
+//Center of Navbar
  const Center = styled.div`
     flex: 1;
     text-align: center; 
  `;
 
- const MenuItem = styled.div`
-   display: inline-block;
-   align-items: center;
-   font-size: 15px;
-   cursor: pointer;
-   margin-left: 20px;
-   ${mobile({ display: "none", fontSize: "12px", marginLeft:"10px"})}
- `;
+// Pages on navbar
+const MenuItem = styled.div`
+display: inline-block;
+align-items: center;
+font-size: 20px;
+cursor: pointer;
+margin-left: 20px;
+${mobile({ display: "none", fontSize: "12px", marginLeft:"10px"})}
+`;
 
- 
  //Right side of Navbar
  const Right = styled.div`
     flex: 1;
@@ -73,17 +77,18 @@ const Logo = styled.h1`
     ${mobile({justifyContent: "center", flex:"2"})}
  `;
 
-const MenuItem2 = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-cursor: pointer;
-margin-left: 10px;
-${mobile({marginLeft:"10px"})}
+ const MenuItem2 = styled.div`
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   margin-left: 10px;
+   ${mobile({marginLeft:"10px"})}
 `;
 
  const SearchContainer = styled.div`
-   border: none;
+   border:  0.5px solid ;
+   border-radius: 5px;
    display: flex;
    align-items: center;
    margin-left: 25px;
@@ -92,21 +97,13 @@ ${mobile({marginLeft:"10px"})}
    ${mobile({margin: "0px 5px",})}
 `;
 
-/* Input for search bar style
+ //Input for search bar style
 const Input = styled.input`
-   border: none;
-   width: 100px;
+   border: 0.5px solid black;
+   border-radius: 5px;
+   width: 95px;
    ${mobile({width: "50px"})}
-`;  */
-
-const MenuItem3 = styled.div`
-   display: flex;
-align-items: center;
-justify-content: center;
-cursor: pointer;
-margin-left: 10px;
-${mobile({marginLeft:"10px"})}
-`;
+`;  
 
  
 const Navbar = () => { 
@@ -117,33 +114,28 @@ const Navbar = () => {
         <Wrapper>
             <Left> 
                 <Language>EN</Language>
-                <Logo> ARTSHOP </Logo>   
+                <Logo> ARTSHOP </Logo>
+                      
             </Left>
             
             <Center>
-               
-              <Link to="/"><MenuItem>HOME</MenuItem></Link>
-               <MenuItem>ABOUT US</MenuItem>
-               <MenuItem>SHOP</MenuItem>
-               <MenuItem>SIGN UP</MenuItem>
-               <MenuItem>LOGIN</MenuItem>              
+            <Link to="/" style={{ color: '#ffffff' }}><MenuItem>HOME</MenuItem></Link>
+            <Link to="/cart"style={{ color: '#fffff'}}><MenuItem>CART</MenuItem></Link>                  
             </Center>
             
             <Right>
                <SearchContainer>
-                  {/* Can remove comment tags to show the input bar
-                  <Input placeholder='Search'/> */}
-                  <Search/>
-                </SearchContainer>              
+                  <Input placeholder="Search" />
+                  <Search style={{ color: "gray", fontSize: 16 }} />
+               </SearchContainer>              
 
-               <Link to="/cart">
+               <Link to="/cart" style={{ color: '#ffffff' }}>
                <MenuItem2>
                   <Badge badgeContent={quantity} color="primary">
-                  <ShoppingCartOutlined/>
+                  <ShoppingCartOutlined />
                   </Badge>
                </MenuItem2>
                </Link>
-               <MenuItem3><PersonOutline/></MenuItem3>
             </Right>
         </Wrapper>
     </Container>

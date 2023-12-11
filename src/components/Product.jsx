@@ -1,5 +1,5 @@
 //Product component file, CSS layout for each product and elements
-import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from "@material-ui/icons";
+import {  SearchOutlined } from "@material-ui/icons";
 import styled from "styled-components";
 import {Link} from "react-router-dom";
 
@@ -68,7 +68,7 @@ const Icon = styled.div`
     transition: all 0.5s ease;
 
     &:hover{
-        background-color: #ccc4c4;
+        background-color: #c3c3ff;
         transform: scale(1.1);
     }
 `;
@@ -82,15 +82,9 @@ const Product = ({item}) => {
         <Image src={item.img} />
         <Info>
             <Icon>
-                <ShoppingCartOutlined/>
-            </Icon>
-            <Icon>
-            <Link to={`/product/${item._id}`}>
-                <SearchOutlined/>
+            <Link to={`/product/${item._id}`} style={{ color: '#000000' }}>
+                <SearchOutlined />
             </Link>
-            </Icon>
-            <Icon>
-                <FavoriteBorderOutlined/>
             </Icon>
         </Info>
     </Container>

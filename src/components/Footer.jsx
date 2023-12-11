@@ -3,6 +3,7 @@
 import { Facebook, Instagram, MailOutline, Phone, Pinterest, Room, Twitter } from "@material-ui/icons";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { Link } from "react-router-dom";
 
 
 const Container = styled.div`
@@ -124,11 +125,8 @@ const Footer = () => {
         <Center>
             <Title>Useful Links</Title>
             <List>
-                <ListItem>Home</ListItem>
-                <ListItem>Cart</ListItem>
-                <ListItem>My Account</ListItem>
-                <ListItem>Wishlist</ListItem>
-                <ListItem>Order Tracking</ListItem>
+                <Link to="/" style={{color:"#ffffff"}}><ListItem>Home</ListItem></Link>
+                <Link to="/cart" style={{color:"#ffffff"}}><ListItem>Cart</ListItem></Link>
                 <ListItem>Terms</ListItem>
             </List>
         </Center>

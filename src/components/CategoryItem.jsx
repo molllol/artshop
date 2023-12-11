@@ -48,9 +48,13 @@ const Button= styled.button`
     border: none;
     padding: 10px;
     background-color: white;
-    color: grey;
+    color: #2e2e2e;
     cursor: pointer;
     font-weight: 600;
+    &:hover{
+        background-color: #c3c3ff;
+    }
+    
 `;
 
 const  CategoryItem = ({item})  => {

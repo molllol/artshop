@@ -90,7 +90,7 @@ const Amount = styled.span`
 
 const Button = styled.button`
     padding: 15px;
-    border: 2px solid #c8cbf7;
+    border: 2px solid #121213;
     background-color: white;
     cursor: pointer;
     font-weight: 500;
@@ -119,7 +119,7 @@ const Product = () => {
   
     const handleQuantity = (type) => {
       if (type === "dec") {
-        quantity > 1 && setQuantity(quantity - 1);
+        quantity > 0 && setQuantity(quantity - 1);
       } else {
         setQuantity(quantity + 1);
       }

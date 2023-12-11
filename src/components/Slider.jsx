@@ -55,7 +55,7 @@ const Slide = styled.div`
 
 //Img Container
 const ImgContainer = styled.div`
-    height: 90%;   
+    height: 85%;   
     flex: 1;
 `;
 
@@ -81,12 +81,7 @@ font-weight: 500px;
 letter-spacing: 3px;
 `;
 
-const Button = styled.button`
-padding: 10px;
-font-size: 20px;
-background-color: transparent;
-cursor: pointer;
-`;
+
 
 const Slider = () => {
     const [slideIndex, setSlideIndex] = useState(0);
@@ -115,7 +110,6 @@ const Slider = () => {
                 <InfoContainer>
                     <Title>{item.title}</Title>
                     <Desc>{item.desc}</Desc>
-                    <Button>SHOP NOW</Button>
                 </InfoContainer>
             </Slide>
             ))}

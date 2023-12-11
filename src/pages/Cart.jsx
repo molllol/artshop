@@ -2,7 +2,6 @@
 import styled from 'styled-components';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { Add, Remove } from '@material-ui/icons';
 import { mobile } from '../responsive'; 
 import StripeCheckout from "react-stripe-checkout";
 import { useEffect, useState } from "react";
@@ -23,39 +22,17 @@ const Wrapper = styled.div`
     ${mobile({padding: "10px"})}
 `;
 
+
 const Title = styled.h1`
     font-weight: 300;
     text-align: center;
 `;
 
-const Top = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-`;
 
-const TopButton = styled.button`
-    padding: 10px;
-    font-weight: 600;
-    cursor: pointer;
-    border: ${props=>props.type === "filled" && "none"};
-    background-color: ${props=>props.type === "filled" ? "black" : "transparent"};
-    color: ${props=>props.type === "filled" && "white"};
-`;
-
-const TopTexts = styled.div`
-${mobile({display: "none"})}
-`;
-
-const TopText = styled.span`
-    text-decoration: underline;
-    cursor: pointer;
-    margin: 0px 10px;
-`;
 
 const Bottom = styled.div`
     display: flex;
+    margin-top: 40px;
     justify-content: space-between;
     ${mobile({flexDirection: "column"})}
 `;
@@ -113,7 +90,7 @@ const ProductAmountContainer = styled.div`
 `;
 
 const ProductAmount = styled.div`
-    font-size: 20px;
+    font-size: 30px;
     margin: 5px;
     ${mobile({margin: "10px 15px"})}
 `;
@@ -138,7 +115,7 @@ const Summary = styled.div`
     border: 0.5px solid #f2deff;
     border-radius: 10px;
     padding: 30px;
-    height: 60vh;
+    height: 65vh;
 `;
 
 const SummaryTitle = styled.h1`
@@ -168,6 +145,9 @@ padding: 10px;
 background-color: black;
 color: white;
 font-weight: 600;
+&:hover{
+        background-color: #c3c3ff;
+    }
 `;
 
 const Cart = () => {
@@ -199,15 +179,10 @@ const Cart = () => {
     <Container>
         <Navbar/>
         <Wrapper>
+            
+
             <Title>YOUR BAG</Title>
-            <Top>
-                <TopButton>CONTINUE SHOPPING</TopButton>
-                <TopTexts>
-                    <TopText>Shopping Bag(2)</TopText>
-                    <TopText>Your Wishlist(0)</TopText>
-                </TopTexts>
-                <TopButton type = "filled">CHECKOUT NOW</TopButton>
-            </Top>
+            
             <Bottom>
                 <Info>
                     {cart.products.map((product) => (
@@ -228,9 +203,9 @@ const Cart = () => {
                     </ProductDetail>
                     <PriceDetail>
                       <ProductAmountContainer>
-                        <Add />
-                        <ProductAmount>{product.quantity}</ProductAmount>
-                        <Remove />
+                        
+                        <ProductAmount>{product.quantity} * {product.price}</ProductAmount>
+                        
                       </ProductAmountContainer>
                       <ProductPrice>
                         $ {product.price * product.quantity}
@@ -260,7 +235,7 @@ const Cart = () => {
             </SummaryItem>
             <StripeCheckout
               name="ARTSHOP"
-              image="https://avatars.githubusercontent.com/u/111193897?s=400&u=93a1eadcf801975bfe69a4615699a0f35e3f904a&v=4"
+              image="https://images.unsplash.com/photo-1535392432937-a27c36ec07b5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGFsbSUyMHRyZWVzfGVufDB8fDB8fHww"
               billingAddress
               shippingAddress
               description={`Your total is $${cart.total}`}

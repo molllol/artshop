@@ -40,7 +40,7 @@ export const categories = [
         id: 1,
         img: "https://images.unsplash.com/photo-1586455122412-4576812ffe42?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         title:"Psychedelic Dance",
-        cat:"abstract",
+        cat:"Abstract",
     
 
     },
@@ -49,7 +49,7 @@ export const categories = [
         id: 2,
         img:"https://images.unsplash.com/photo-1542772144-515ddfae17e9?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         title:"Urban Canvas",
-        cat:"graffiti",
+        cat:"Graffiti",
       
     },
 
@@ -57,7 +57,7 @@ export const categories = [
         id: 3,
         img:"https://images.unsplash.com/photo-1586348943529-beaae6c28db9?q=80&w=1315&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         title:"Pixelated Whimsy",
-        cat:"lens",
+        cat:"Lens",
      
     },
 
