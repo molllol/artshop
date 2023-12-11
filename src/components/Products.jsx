@@ -34,7 +34,7 @@ const Products = ({cat,filters,sort}) => {
       ))
     );
   }, [products,cat,filters])
-
+//Sort Filter
    useEffect(() => {
     if (sort === "newest") {
       setFilteredProducts((prev) =>
@@ -52,6 +52,7 @@ const Products = ({cat,filters,sort}) => {
   }, [sort]);
 
   return (
+    //Return Code to show the number of products showing on homepage
     <Container>
          {cat
         ? filteredProducts.map((item) => <Product item={item} key={item.id} />)
