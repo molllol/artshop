@@ -2,12 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-##What is the application?
+## What is the application?
 
 A shop, functioning as a demonstration illustrating the utilization of the MERN Stack in the development of a website.
 Note: all images used in this project have been obtained from unslpash.com for example purposes.
 
-##How to run the application
+## How to run the application
 
 
 ## Available Scripts
