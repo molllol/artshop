@@ -37,8 +37,8 @@ into the folder shop-api and type
 
 If the database is running successfully, it will say in the terminal:
 
-## $ backend server is running!
-## $ DB Connection Successful!
+### $ backend server is running!
+### $ DB Connection Successful!
 
 
 
