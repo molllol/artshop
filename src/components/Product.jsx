@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 
 
 
-//style for the info 
+//style for the info (search icon)
 const Info = styled.div`
     opacity: 0;
     width: 100%;
@@ -26,7 +26,7 @@ const Info = styled.div`
 const Container = styled.div`
     flex: 1;
     margin: 10px;
-    min-width: 280px;
+    min-width: 250px;
     height: 350px;
     display: flex;
     align-items: center;
@@ -39,9 +39,9 @@ const Container = styled.div`
     }
 `;
 
-//Style for circle
+//Style for circle behind product image
 const Circle = styled.div`
-    width: 250px;
+    width: 260px;
     height: 250px;
     border-radius: 50%;
     background-color: white;
@@ -55,7 +55,7 @@ const Image = styled.img`
 `;
 
 
-//Style for the icons
+//Style for the search icon hovering product
 const Icon = styled.div`
     width: 40px;
     height: 40px;
