@@ -25,7 +25,7 @@ Still in the folder artshop type
 ### $ npm start
 
 
-## How To Run the Database
+## How to run the Database
 
 Open a new terminal and  the end directory should be artshop and then type
 
@@ -37,7 +37,7 @@ into the folder shop-api and type
 
 If the database is running successfully, it will say in the terminal:
 
-### $ backend server is running!
+### $ Backend server is running!
 ### $ DB Connection Successful!
 
 
