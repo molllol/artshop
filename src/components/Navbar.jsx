@@ -58,11 +58,12 @@ ${mobile({fontSize: "24px"})}
     text-align: center; 
  `;
 
-// Pages on navbar
+// Center of navbar showing the pages
 const MenuItem = styled.div`
 display: inline-block;
 align-items: center;
 font-size: 20px;
+color: white;
 cursor: pointer;
 margin-left: 20px;
 ${mobile({ display: "none", fontSize: "12px", marginLeft:"10px"})}
@@ -119,8 +120,8 @@ const Navbar = () => {
             </Left>
             
             <Center>
-            <Link to="/" style={{ color: '#ffffff' }}><MenuItem>HOME</MenuItem></Link>
-            <Link to="/cart"style={{ color: '#fffff'}}><MenuItem>CART</MenuItem></Link>                  
+            <Link to="/" ><MenuItem>HOME</MenuItem></Link>
+            <Link to="/cart"><MenuItem>CART</MenuItem></Link>                  
             </Center>
             
             <Right>
