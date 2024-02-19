@@ -6,7 +6,7 @@ Note: all images used in this project have been obtained from unslpash.com for e
 ## Installation Instructions
 You need to have git installed on your device first to be able to run git commands on the command line. To download git https://git-scm.com/downloads
 Aftar installing git:
-Open your terminal and then type
+Open your terminal (in an IDE such as VScode  or Command Prompt/Mac Terminal)and then type
 
 ### $ git clone https://github.com/molllol/artshop.git
 
