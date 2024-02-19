@@ -5,14 +5,15 @@ Note: all images used in this project have been obtained from unslpash.com for e
 
 ## Installation Instructions
 You need to have git and node installed on your device first to be able to run git and node commands on the command line. To download GIT: https://git-scm.com/downloads and NODE: https://nodejs.org/en/download
+
 Aftar installing git and node:
-Open your terminal (in an IDE such as VScode  or Command Prompt/Mac Terminal)and then type
+Open your terminal (in an IDE such as VScode  or Command Prompt/Mac Terminal)and type:
 
 ### $ git clone https://github.com/molllol/artshop.git
 
 This clones the repo
 
-cd into the folder artshop and type
+cd into the folder artshop and type:
 
 ### $ npm install
 
@@ -21,18 +22,18 @@ This installs the required dependencies
 
 ## How to run the server
 
-Still in the folder artshop type
+Still in the folder artshop type:
 
 ### $ npm start
 
 
 ## How to run the Database
 
-Open a new terminal and  the end directory should be artshop and then type
+Open a new terminal and the end directory should be artshop and type:
 
 ### $cd  shop-api
 
-into the folder shop-api and type
+into the folder shop-api and type:
 
 ### $ npm start
 
